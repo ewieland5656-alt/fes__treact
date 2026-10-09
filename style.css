@@ -582,12 +582,11 @@ PRICING
 }
 
 .plan {
+  width:calc(100%/3);
   display: flex;
   flex-direction: column;
   position: relative;
   margin-top: 4rem;
-  width: 100%;
-  max-width: 24rem;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   padding-left: 32px;
@@ -944,7 +943,7 @@ FOOTER
 footer {
   font-family: "Inter", sans-serif;
   position: relative;
-  padding: 96px 32px;
+  padding: 96px 32px 60px ;
   background-color: rgb(100 21 255 );
   overflow: hidden;
   margin-bottom: -32px;
@@ -976,6 +975,7 @@ footer {
 .footer__columns {
   margin-top: -48px;
  display: flex;
+ flex-wrap: wrap;
  flex-direction: row;
  justify-content: space-between;
  align-items: center;
@@ -991,11 +991,106 @@ footer {
 
 .footer__column--link {
   color: white;
+  padding-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer__column--link:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  bottom: -6px;
+  width: 100%;
+  transition: all 300ms ease;
+}
+
+.footer__column--title {
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.footer__divider {
+  height: 2px;
+  width: 100%;
+  background: rgb(116, 44, 255);
+  margin: 64px 0;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__logo {
-  width: 30px;
+  display: flex;
+  align-items: center;
 }
+
+.footer__logo--img {
+  width: 35px;
+  padding-right: 10px;
+}
+
+.footer__logo--text {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing:1px;
+}
+
+.footer__copyright {
+  color:#cbd5e0 ;
+  font-weight: 500;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  margin-left: -16px;
+}
+
+.footer__social--link{
+  margin-left: 16px;
+  padding: 10px;
+  background: #f7fafc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  transition: all 300ms ease;
+  z-index: 2;
+}
+.footer__social--link:hover{
+  background: #c7c9cb;
+}
+
+
+@media (max-width: 1024px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__description, .header__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+    }
+  }
+
+  
+
 
 
 
